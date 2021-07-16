@@ -1,44 +1,74 @@
-import React from 'react'
+import { useState, useEffect, useRef } from 'react'
 import ReactPlayer from 'react-player';
 import Moment from "moment";
+import axios from "axios";
+import CountDown from "../CountDown/CountDown"
+
 Moment().format()
 
 function VideoPlayer() {
-    // let timestart;
-
-    let time = Moment()
-    console.log(time)
-    let newTime = Moment("2021-07-12 12:46:20")
-
-    // if (time.isAfter(newTime)){
-    //     let timestart = time.diff(newTime, "seconds")
-    //     console.log(timestart)
-    // }
-    let timestart = time.diff(newTime, "seconds")
-
-    const url=`https://www.youtube.com/embed/bx3--22D4E4?start=${timestart}`
-    console.log(timestart)
-
-
-    // const newDate = Moment()
-    // console.log(newDate)
     
-//     function showTime(){
-//         let date = Moment();
-//         let playTime = Moment("2021-07-09 21:33:50")
-        
-//         setTimeout(showTime, 1000);
-//   }
+    const [ videoList, setVideoList] = useState(null)
+    const [ newVideo, setNewVideo] = useState(null)
+    const [ currentIndex, setCurrentIndex] = useState(0)
+    const playerRef = useRef(null)
 
+    useEffect(() => {
+        axios.get(`/api/nextvideo`)
+            .then(res => {
+                setVideoList(res.data)
+                setNewVideo(res.data[0])
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }, [])
+   
+    console.log(videoList)
 
-/* Download Moment.
-    set timestart to 0.
-    Use isAfter. If time is after, the set time the video will play.
-    Use difference but in seconds to set at what period the video will start.
-*/
+    console.log(newVideo)
+
+    if (newVideo === null){
+        return ""
+    }
+    
+    if (videoList.length === 0){
+        return ""
+    }
+
+    const currentTime = Moment();
+ 
+    let newTime = Moment(newVideo.showing)
+    console.log(newVideo.showing)
+    let timestart = currentTime.diff(newTime, "seconds")
+
+    console.log(timestart)
+    const url=`${newVideo.video}${timestart}`
+
+    const endTime = Moment.duration(newVideo.duration, "minutes")
+    const newEndTime = Moment(newVideo.showing).add(endTime, "minutes").toDate()
+
+    function nextPlay() {
+        const newIndex = currentIndex +1;
+        setCurrentIndex(newIndex);
+        const newVideoList = videoList.filter(video=>(currentTime.isBefore(video.showing)))
+        setNewVideo(newVideoList[newIndex])
+    }
+
+    const newVideoList=videoList.filter(video=>currentTime.isAfter(newEndTime))
+
+    console.log(newVideoList)
+    
+    console.log("newEndTime", newEndTime)
+    console.log("endTime", endTime)
+
+    // const toggleMute = () => {
+    //     playerRef.current.internalPlayer.toggleMute()
+    //     }
+
     return (
 
-        Moment().isAfter("2021-07-12 12:46:20") ?
+        currentTime.isAfter(newVideo.showing) && currentTime.isBefore(newEndTime) ?
    <>
      <ReactPlayer
         url={ url }
@@ -46,12 +76,14 @@ function VideoPlayer() {
         controls={true}
         autoPlay={true}
         muted={true}
+        ref={playerRef}
+        onEnded={()=>nextPlay()}
+        
         // style={{ pointerEvents: 'none' }}
-        // width={props.width}
-        // height={props.height}
       />
+      <button onClick={() => playerRef.current.unmute}>Volume</button>
    </>
-   : <p>Please wait for next video</p>
+   : <CountDown videoList={newVideo} timestart={newVideo.showing}/> 
     )
 }
 

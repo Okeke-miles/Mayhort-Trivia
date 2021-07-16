@@ -28,6 +28,10 @@ const Header = () => {
                     to="/videos">
                         Sign In
                 </Link>
+                <Link 
+                    to="/nextvideo">
+                        Next Video
+                </Link>
             </div>
         </nav>
     )
