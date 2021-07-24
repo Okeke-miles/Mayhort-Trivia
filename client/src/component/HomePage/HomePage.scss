@@ -1,0 +1,59 @@
+
+.home{
+
+    background-color: #323232;
+    font-size: 4rem;
+}
+.homepage__btn-style{
+    border-radius: 5px;
+    height: 5rem;
+    width: 10rem;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+    font-family: cursive;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #AFAFAF;
+        color: white;
+    }
+}
+.home__title {
+    padding-top: 10rem;
+    color: white;
+}
+
+// .emoji {
+//     //     margin-top: 50px;
+//     //     border-radius: 50%;
+//     //     width: 50px;
+//     //     height: 50px;
+//     //     animation-name: bounce;
+//     //     animation: bounce 1s infinite alternate;
+//     //   }
+//     //   @keyframes bounce {
+//     //     from {
+//     //       transform: translateY(0px);
+//     //     }
+//     //     to {
+//     //       transform: translateY(-15px);
+//     //     }
+//         animation-duration: 2s;
+//         animation-iteration-count: infinite;
+//         height: 200px;
+//         margin: 0 auto 0 auto;
+//         transform-origin: bottom;
+//         width: 200px;
+    
+//     .bounce-1 {
+//         animation-name: bounce-1;
+//         animation-timing-function: linear;
+//     }
+//     @keyframes bounce-1 {
+//         0%   { transform: translateY(0); }
+//         50%  { transform: translateY(-100px); }
+//         100% { transform: translateY(0); }
+//     }
+      
+//     }
+

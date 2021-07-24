@@ -1,0 +1,25 @@
+.score__board{
+    background-color: pink;
+    padding-bottom: 10rem;
+}
+
+.score__card{
+    color: white;
+    padding-top: 6rem;
+    margin-bottom: 4rem;
+}
+
+.playagain__button{
+    height: 2rem;
+    width: 5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: white;
+    color: pink; 
+
+    &:hover{
+        background-color:pink;
+        color: white;
+    }
+    margin-bottom: 20rem;
+}
