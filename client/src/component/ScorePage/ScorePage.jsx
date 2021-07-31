@@ -7,7 +7,7 @@ function ScorePage({score, playAgain}) {
         <div className="score__board">
             <h1 className="score__card">Your score is {score}!!! </h1>
             <Link to="/">
-            <button className="playagain__button" onClick={playAgain}>Play again!</button>
+                <button className="playagain__button" onClick={playAgain}>Play again!</button>
             </Link>
         </div>
     )

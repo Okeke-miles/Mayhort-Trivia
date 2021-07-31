@@ -19,22 +19,22 @@ function MainPage(){
         .then(data => {
           setQuestions(data.results)
           })
-        }, [])
-        console.log(question)
+    }, [])
 
-        const handleAnswer = (answer) => {
-            const newIndex = currentIndex +1;
-            setCurrentIndex(newIndex);
-            if(answer===question[currentIndex].correct_answer){
-                setScore(score + 1);
-            }
-          if(newIndex >= question.length){
-              setGameEnded(true)
-          }
+    const handleAnswer = (answer) => {
+        const newIndex = currentIndex +1;
+        setCurrentIndex(newIndex);
+        if(answer===question[currentIndex].correct_answer){
+            setScore(score + 1);
         }
-        if (gameEnded===true){
-            <Redirect from="/trivia" to="/result"/>
+        if(newIndex >= question.length){
+            setGameEnded(true)
         }
+    }
+
+    if (gameEnded===true){
+        <Redirect from="/trivia" to="/result"/>
+    }
        
     return gameEnded ? (
  
@@ -48,12 +48,11 @@ function MainPage(){
            <Question 
            data ={question[currentIndex]} handleAnswer={handleAnswer}/>
            
-       
         </div>
     ) : 
         <h2 className="loading__style">Loading</h2>
     
-        )
+    )
 }
 
 
