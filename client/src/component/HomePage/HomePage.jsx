@@ -7,10 +7,10 @@ import '../HomePage/HomePage.scss'
 function HomePage() {
     return (
     <section className="home" >
-        <div >
+        <div className="home-container__style">
             <h1 className="home__title">Test Your Knowledge <span className="emoji">🤔</span></h1>
             <Link to="/trivia">
-            <button className="homepage__btn-style">Proceed</button>
+                <button className="homepage__btn-style">Proceed</button>
             </Link>
         </div>
     </section>
