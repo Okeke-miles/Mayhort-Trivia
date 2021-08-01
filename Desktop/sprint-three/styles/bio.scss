@@ -1,0 +1,552 @@
+@use "./Partials/mixins" as *;
+@use "./Partials/typography" as *;
+@use "./Partials/colors" as *;
+@use "./Partials/variables" as *;
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: "Avenir";
+    background-color: $white;
+}
+.header{
+    width: 100%;
+    background-color: $bandsite-black;
+    color: $white;
+    font-size: $font-size;
+    padding-top: $padding;
+   
+    &__nav{
+    text-align: center;
+    }
+    &__title{
+    background-color: $bandsite-black;
+    display: flex;
+    font-weight: 700;
+    justify-content: center;
+    }
+    &__link{
+    text-decoration: none;
+    color: $mercury;
+    display: block;
+    padding-bottom: 1rem;
+    height: 5rem;
+   
+    
+    @include tablet{
+        height: 4rem;
+        padding-bottom: 3.8rem;
+        }
+    @include desktop{
+        height: 4rem;
+        padding-bottom: 3.8rem;
+        }
+    
+    &:active{
+    color: $white;
+    border-bottom: 0.5rem solid #FFFFFF;
+    font-weight: bold;
+    height: 5rem;
+    }
+    &:hover{
+    color: $white;
+    transform: scale(1.5)
+    }
+    &-active{
+    border-bottom: 0.2rem solid $white;
+    font-weight: bold;
+    color: $white;
+    }
+    }
+    &__list{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+        
+    @include tablet{
+        width: 40vw;
+        }
+    }
+ 
+    @include tablet{
+        display: flex;
+        align-items: center;
+        padding: 2rem;
+        height: 15vh;
+        padding-top: 5rem;
+    }
+
+    &__logo{
+        height: 4vh;
+    }
+}
+
+.logomark__link-style{
+    text-decoration: none;
+    color: $white;
+    display: block;
+    @include tablet{
+    margin-bottom: 2rem;
+    }
+}
+
+.hero{
+    &__section{
+    position: relative; 
+    background: url(/assets/images/hero-bio.jpg) center no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    height: 120vh;
+    }
+
+   &__title{
+    font-size: $font-size;
+    font-weight: 700 bold;
+    color: $white;
+    position: absolute;
+    top: 0;
+    margin: 2rem;
+    margin-top: 20rem;
+
+    @include tablet{
+        font-size: 5.75rem;
+    }
+
+    @include desktop{
+        font-size: 5.75rem;
+    }
+    }
+
+    &__opacity {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $bandsite-black;
+    opacity: 50%;
+    }
+}
+.about{
+    &__title{
+    font-size: $font-size;
+    font-weight: bold 700;
+    padding: 1.5rem 0;
+    width: 90%;
+    margin: 0 auto;
+    
+    @include tablet{
+        font-size: 2.25rem;
+        width: 90%;
+        margin: 0 auto
+    }
+    }
+    &__image{
+    width: 100%;
+    }
+    &__section{
+    width: 90%;
+    margin: 0 auto;
+    @include tablet{
+        width: 70%;
+        margin: 0 auto;
+    }
+    }
+}
+.teddy__quote{
+    font-weight: bold;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    @include tablet{
+        font-size: 1.2rem;
+        margin: 3rem 0;
+    }
+    @include desktop{
+        width: 60%;
+        margin: 3rem 0;
+    }
+}
+
+.bees{
+    &__title-header{
+    margin: 1rem 0
+    }
+    &__content-wrapper{
+    @include tablet{
+        padding-bottom: $padding;
+        width: 100%;
+        display: flex;
+        font-size: 0.813rem;
+        line-height: 1.125rem;
+    }
+    @include tablet{
+        font-size: 0.875rem;
+        line-height: 1.375rem;    
+    }
+    }
+
+    &__content{
+    margin-bottom: 2rem;
+    @include tablet{
+        width: 45%;
+        font-size: 1.2rem;
+        line-height: 1.3rem;
+        margin-right: 2rem;
+        }
+    @include desktop{
+        width: 50%;
+    }
+    }
+    &__content2{
+    @include tablet{
+        width: 45%;
+        display: inline-block;
+        font-size: 1.2rem;
+        line-height: 1.3rem;
+        }
+    @include desktop{
+        width: 50%;
+        height: 10vh
+        }
+    }
+}
+.gallery{
+    font-size: $font-size;
+    font-weight: bold 700;
+    padding: 2rem 0;
+    background-color: $alabaster;
+    padding-top: 1rem;
+    width: 90%;
+    margin: 0 auto;
+
+    &__header{
+    @include tablet{
+        width: 90%;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+    }
+    &__section-container{
+    @include tablet{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        }
+    }
+    &__image{
+    width: 100%;
+    filter: grayscale(100%);
+
+    &:hover{
+    filter: none
+    }
+    @include tablet{
+        margin-bottom: $margin;
+    }
+    }
+}
+.image__container{
+    @include tablet{
+        width: 30%;
+    }
+}
+.avatar__style{
+    height: 2rem;
+    border-radius: 50%;
+    width: 2.2rem;
+    position: absolute;
+    margin-right: -5rem;
+    margin-top: 2rem;
+
+    @include tablet{
+        height: 2.5rem;
+        width: 2.5rem;
+        margin-left: $margin * 2;
+    }
+    @include desktop{
+        height: 2.5rem;
+        width: 2.5rem;
+        margin-left: 4rem;
+    }
+
+}
+
+.label{
+    margin: 0.25;
+    display: block;
+    margin-left: 4rem;
+    font-weight: 700;
+    color: $mercury;
+
+    @include tablet{
+        margin-left: 7.5rem
+    }
+    @include desktop{
+        margin-left: 8.5rem
+    }
+}
+#name, #comment{
+    border: 1px solid $mercury;
+    border-radius: 4px;
+    color: $bandsite-black;
+    font-weight: 700;
+    padding: 0.75rem;
+    display: block;
+    margin: 2rem 0;
+    margin-left: 4rem;
+    height:2.25rem;
+    width: 25rem;
+    @include tablet{
+        height:3rem;
+        padding: 1rem;
+        width: 30rem;
+        margin-left: 7.5rem;
+    }
+    @include desktop{
+        margin-left: 8.5rem;
+        width: 30rem;
+    }
+    
+    :active{
+        border-color: $bandsite-black
+    }
+    :focus{
+        border-color: $bandsite-black;
+    }
+    :invalid{
+        border-color: $error
+    }
+    :required{
+        border-color: $error
+    }
+
+    @include desktop{
+        width: 30rem;
+    }
+}
+
+#comment{
+    width: 25rem;
+    height: 10rem;
+    
+    @include tablet{
+        width: 30rem;
+    }
+
+    @include desktop{
+        width: 30rem;
+    }
+}
+
+.comments{
+    &__section{
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    }
+    &__title{
+    font-size: $font-size;
+    margin: 2rem 0;
+
+    @include tablet{
+    margin: 2rem 0;
+    font-size: $font-size * 2;
+    }
+    @include desktop{
+    margin: 2rem 0;
+    font-size: $font-size * 2;
+        }
+    }
+}
+#comment__button{
+    color: $white;
+    background-color: $bandsite-black;
+    width: 30rem;
+    height: 3rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    cursor:pointer;
+
+    &:hover{
+        background-color: $bandsite-darkblack;
+    }
+    @include tablet{
+        width: 10rem;
+        margin: 0 0 2rem 25rem;
+    }
+    @include desktop{
+        width: 10rem;
+        margin: 0 0rem 2rem 30rem; 
+    }
+}
+
+.comment{
+    border-top: 1px solid $mercury;
+    margin: 2rem 0;
+   
+    @include tablet{
+        width: 40rem;
+        
+        margin-top: $margin + 0.5rem;
+        padding-top: $padding + 0.5rem;
+    }
+    @include desktop{
+        width: 40rem;
+        margin-top: $margin + 0.5rem;
+        padding-top: $padding + 0.5rem;
+    }
+
+    &__container{
+        width: 30rem;
+        @include tablet{
+        width:60%;
+        margin: 0 auto;
+        }
+        @include desktop{
+        width:30%;
+        margin: 0 auto;
+    }
+}
+
+
+
+.comment:last-child{
+    margin-bottom: $margin + 0.5rem;
+    padding-bottom: $padding + 0.5rem;
+    border-bottom: 2px solid $mercury;
+}
+
+.card{
+    &__date{
+    display: inline;
+    color: $mercury;
+    font-weight: 700;
+    }
+    &__photo{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    margin-top: 1rem;
+    background-color: $mercury;
+    }
+
+    &__name{
+    display: inline-block;
+    margin-right: $margin * 2;
+    margin-left: $margin + 0.5rem;
+    width: 10rem;
+
+    @include tablet{
+        width: 50%;
+    }
+    @include desktop{
+    width: 60%
+    }
+    }
+    &__text{
+    margin-left: 4rem;
+    font-weight: 400;
+    }
+}
+
+.comment__form{
+    @include tablet{
+        width: 80%;
+        margin: 0 auto;
+    }
+     @include desktop{
+         width: 40%;
+         margin: 0 auto;
+     }
+ }
+
+.footer{
+    background-color: $bandsite-black;
+    color: $white;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.125;
+    @include tablet{
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
+    @include tablet{
+        display: flex;
+        position: relative;
+    }
+    &__content-contact{
+    @include tablet{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 30%;
+        margin-top: $margin + 0.5rem;
+    }
+    }
+    &__band-name{
+    margin-top: $margin * 2;
+    @include tablet{
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: $margin * 2;
+    }
+    }
+    &__icon{
+    margin-right: 1rem;
+    }
+    &__content{
+    width: 90%;
+    margin: 0 auto;
+    }
+    &__link{
+        text-decoration: none;
+        color: $white;
+    }
+}
+
+.contact__message, .footer__icon, .contact__adams, .contact__pearl, .contact__carson, .copyright__message{
+    padding: 1rem 0;
+}
+
+.contact{
+    &__container{
+    @include tablet{
+        display: flex;
+    }
+    }
+    &__address{
+    margin: 2rem 0;
+    display: block;
+    @include tablet{
+        margin: 2rem 0;
+        display: block;
+    }
+    }
+    &__pearl{
+    margin-right: -1rem;
+    @include tablet{
+        width: 50vw;
+    }  
+    }
+    &__adams{
+    margin-right: -1rem;
+    @include tablet{
+        width: 50vw;
+    }  
+    }
+    &__carson{
+    margin-right: -1rem;
+    @include tablet{
+        width: 50vw;
+    }  
+    }
+}
+}
