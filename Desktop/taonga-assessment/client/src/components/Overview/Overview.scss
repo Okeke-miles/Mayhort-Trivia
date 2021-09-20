@@ -31,6 +31,7 @@
 .overview-status__style{
     display: flex;
     padding-top: 4rem;
+    justify-content: space-evenly;
     :hover{
         border: 2px solid $blue;
         color: $blue;
@@ -42,6 +43,8 @@
     height: 134px;
     border: 2px solid $border;
     margin-right: 2.5rem;
+    background-color: $white;
+    border-radius: 10px;
 
     :hover{
         border: none;
@@ -57,4 +60,86 @@
 .quantity__style{
     color: $raisin-black;
     font-weight: bold;
+}
+
+.unresolved-section__style{
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-between;
+}
+
+.unresolved-container__style, .unresolved-task-container__style{
+    display: flex;
+    border: 2px solid $gray;
+    width: 546px;
+    height: 336px;
+    background-color: $white;
+    justify-content: space-between;
+    padding: 0rem 1rem;
+    border-radius: 10px;
+}
+
+.unresolved__style{
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-bottom: 1.8rem;
+    margin-right: 2rem;
+}
+
+.support__style{
+    font-size: 0.8rem;
+    color: $gray
+}
+
+.unresolved-desc__style, .unresolved-qty__style, .unresolved-task__style, .unresolved-task-qty__style{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+}
+
+.unresolved-desc__style, .unresolved-task__style{
+    margin-left: 2rem;
+}
+.unresolved-qty__style, .unresolved-task-qty__style{
+    color: $gray;
+}
+
+.quantity__style{
+    color: $blue;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.plus__style{
+    border: 2px solid $gray;
+    border-radius: 5px;
+    text-align: center;
+    background-color: $gray;
+    color: $raisin-black;
+    padding-left: 5px;
+    width: 24px;
+}
+
+.urgent__style{
+    border: 2px solid $yellow;
+    background-color: $yellow;
+    border-radius: 5px;
+    color: $white;
+    width: 74px;
+}
+
+.new__style{
+    border: 2px solid $green;
+    background-color: $green;
+    border-radius: 5px;
+    color: $white;
+    width: 54px;
+}
+
+.default__style{
+    border: 2px solid $gray;
+    background-color: $gray;
+    border-radius: 5px;
+    color: $raisin-black;
+    width: 76px;
 }
