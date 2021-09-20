@@ -46,22 +46,60 @@
 
 .home-form__style{
     padding-top: 2rem;
-    border: 2px solid red;
+    // border: 2px solid red;
 }
 
-.home-form-container__style{
- 
-    border: 2px solid green;
-}
+// .home-form-container__style{
+//     border: 2px solid green;
+// }
 
 .password-label__style, .email-label__style, .home-button__style, .password-input__style, .email-input__style{
     display: block;
     text-align: left;
+    margin: 0.5rem 0;
+    width: 100%;
+    // color: $raisin-black;
 }
 
+.password-label__style, .email-label__style{
+    font-weight: 700;
+}
+
+.signup__style{
+    color: $blue;
+}
+
+.password-input__style, .email-input__style{
+    height: 2rem;
+    border-radius: 3px;
+    border: 2px solid $gray;
+
+    &::placeholder{
+        padding-left: 1rem;
+        color: $gray;
+    }
+}
+
+.home-flex__container{
+    display: flex;
+    align-items: center;
+}
+
+.password-reminder__style{
+    font-size: 0.7rem;
+    width: 50%;
+}
 .home-button__style{
     text-align: center;
     width: 100%;
     margin: 1rem 0;
     padding: 0.5rem 0;
+    color: $white;
+    background-color: $blue;
+    border-radius: 5px;
+}
+
+.nav-list__item{
+    text-decoration: none;
+    color: $blue;
 }

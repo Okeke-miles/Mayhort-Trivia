@@ -1,0 +1,38 @@
+@use "../../partials/_colors" as *;
+@use "../../partials/_typography" as *;
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar__style{
+    background-color: $raisin-black;
+    width: 15rem;
+}
+
+.navbar-list__style, .navbar-header__style{
+    color: $gray;
+    cursor: pointer;
+
+}
+
+.navbar-header__style{
+    margin-bottom: 3rem;
+    opacity: 8%;
+}
+
+.navbar-list__style{
+    padding: 1rem 0;
+}
+
+.navbar-list{
+    list-style-type: none;
+    :hover{
+        color: $white;
+        background-color: $gray;
+    }
+}

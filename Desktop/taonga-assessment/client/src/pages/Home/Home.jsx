@@ -17,17 +17,20 @@ function Home() {
                         <form className="home-form__style">
                             <label className="email-label__style">EMAIL</label>
                             <input className="email-input__style" type="text" id="email" name= "email"  placeholder="Email address"/>
-                            <label className="password-label__style">PASSWORD</label>
+                            <div className="home-flex__container">
+                                <label className="password-label__style">PASSWORD</label>
+                                <p className="password-reminder__style">Forgot password?</p>
+                            </div>
                             <input className="password-input__style" type="text" id="password" name= "password"  placeholder="Password"/>
-                            <button className="home-button__style">Log In</button>
+                            <NavLink className="nav-list__item" to="/dashboard">
+                                <button className="home-button__style">Log In</button>
+                            </NavLink>
                         </form>
                     </div>
 
                     <div className="create-account__style">
                         <p className="create-desc__style">Don't have an account?</p>
-                        <NavLink className="nav-list__item" to="/dashboard">
-                            Sign up
-                        </NavLink>
+                        <p className="signup__style"> Sign up </p>
                     </div>
                 </div>
             </div>
