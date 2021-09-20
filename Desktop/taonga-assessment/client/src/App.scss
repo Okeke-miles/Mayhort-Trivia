@@ -1,0 +1,19 @@
+@use "./partials/_colors" as *;
+@use "./partials/_typography" as *;
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+  text-align: center;
+  font-family: $primary-font;
+  width: 100%;
+  margin: 0 auto;
+  background-color: $raisin-black;
+  height: 100vh;
+}

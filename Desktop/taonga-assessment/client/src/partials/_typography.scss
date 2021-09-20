@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Mullish';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/mulish/v5/1Ptyg83HX_SGhgqO0yLcmjzUAuWexc1R8aevGw.woff2) format('woff2');;
+}
+
+@font-face {
+    font-family: 'Mullish';
+    font-style: bold;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/mulish/v5/1Ptyg83HX_SGhgqO0yLcmjzUAuWexZNR8aevGw.woff2) format('woff2');
+}
+
+//font family
+
+$primary-font:'Mullish';
+
