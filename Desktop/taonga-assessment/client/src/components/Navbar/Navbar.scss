@@ -12,6 +12,7 @@
 .navbar__style{
     background-color: $raisin-black;
     width: 15rem;
+    height: 100%;
 }
 
 .navbar-list__style, .navbar-header__style{
@@ -23,10 +24,13 @@
 .navbar-header__style{
     margin-bottom: 3rem;
     opacity: 8%;
+    font-size: 1rem;
+    padding-top: 2rem;
 }
 
 .navbar-list__style{
     padding: 1rem 0;
+    font-size: 0.8rem;
 }
 
 .navbar-list{
