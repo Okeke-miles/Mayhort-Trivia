@@ -63,6 +63,67 @@ function Overview() {
                     </div>
 
                 </article>
+                <article>
+                    <div>
+                        <p>All tickets</p>
+                        <p>Sort</p>
+                        <p>Filter</p>
+                    </div>
+                    <div>
+                        <p>Ticket details</p>
+                        <p>Customer name</p>
+                        <p>Date</p>
+                        <p>Priority</p>
+                    </div>
+                    <div>
+                        <main>Contact Email not Linked <p>Updated 1 day ago</p></main>
+                        <main>Tom Cruise <p>on 24.05.2019</p></main>
+                        <main>May 26, 2019 <p>6:30PM</p></main>
+                        <p>High</p>
+                    </div>
+                    <div>
+                        <main>Adding Images to Featured Posts <p>Updated 1 day ago</p></main>
+                        <main>Matt Damon <p>on 24.05.2019</p></main>
+                        <main>May 26, 2019 <p>8:00 AM</p></main>
+                        <p>LOW</p>
+                    </div>
+                    <div>
+                        <main>When will I be charged this month? <p>Updated 2 days ago</p></main>
+                        <main>Robert Downey <p>on 24.05.2019</p></main>
+                        <main>May 26, 2019 <p>7:30 PM</p></main>
+                        <p>HIGH</p>
+                    </div>
+                    <div>
+                        <main>Payment not going through <p>Updated 2 days ago</p></main>
+                        <main>Christian Bale <p>on 24.05.2019</p></main>
+                        <main>May 25, 2019 <p>5:00 PM</p></main>
+                        <p>NORMAL</p>
+                    </div>
+                    <div>
+                        <main>Unable to add replies <p>Updated 2 days ago</p></main>
+                        <main>Henry Cavil <p>on 24.05.2019</p></main>
+                        <main>May 25, 2019 <p>4:00 PM</p></main>
+                        <p>HIGH</p>
+                    </div>
+                    <div>
+                        <main>Downtime since last week <p>Updated 3 days ago</p></main>
+                        <main>Chris Evans <p>on 23.05.2019</p></main>
+                        <main>May 25, 2019 <p>2:00 PM</p></main>
+                        <p>NORMAL</p>
+                    </div>
+                    <div>
+                        <main>Referral Bonus <p>Updated 4 days ago</p></main>
+                        <main>Sam Smith <p>on 22.05.2019</p></main>
+                        <main>May 25, 2019 <p>11:30 AM</p></main>
+                        <p>LOW</p>
+                    </div>
+                    <div>
+                        <main> How do I change my password?<p>Updated 6 days ago</p></main>
+                        <main>Steve Rogers <p>on 21.05.2019</p></main>
+                        <main>May 24, 2019 <p>1:00 PM</p></main>
+                        <p>NORMAL</p>
+                    </div>
+                </article>
             </div>
         </div>
     )
