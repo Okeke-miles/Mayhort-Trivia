@@ -63,65 +63,65 @@ function Overview() {
                     </div>
 
                 </article>
-                <article>
-                    <div>
-                        <p>All tickets</p>
-                        <p>Sort</p>
-                        <p>Filter</p>
+                <article className="tickets-container__style">
+                    <div className="tickets-header__style">
+                        <p className="tickets__style">All tickets</p>
+                        <p className="sort__style">Sort</p>
+                        <p className="filter__style">Filter</p>
                     </div>
-                    <div>
-                        <p>Ticket details</p>
-                        <p>Customer name</p>
-                        <p>Date</p>
-                        <p>Priority</p>
+                    <div className="tickets-details-container__style">
+                        <p className="tickets-details__style">Ticket details</p>
+                        <p className="tickets-customer__style">Customer name</p>
+                        <p className="tickets-date__style">Date</p>
+                        <p className="tickets-priority__style">Priority</p>
                     </div>
-                    <div>
-                        <main>Contact Email not Linked <p>Updated 1 day ago</p></main>
-                        <main>Tom Cruise <p>on 24.05.2019</p></main>
-                        <main>May 26, 2019 <p>6:30PM</p></main>
-                        <p>High</p>
+                    <div className="contact-email-container__style">
+                        <main className="contact-email__style">Contact Email not Linked <p className="updated__style">Updated 1 day ago</p></main>
+                        <main className="contact-email__style">Tom Cruise <p className="updated__style">on 24.05.2019</p></main>
+                        <main className="contact-email__style">May 26, 2019 <p className="updated__style">6:30PM</p></main>
+                        <p className="priority__style">High</p>
                     </div>
-                    <div>
-                        <main>Adding Images to Featured Posts <p>Updated 1 day ago</p></main>
-                        <main>Matt Damon <p>on 24.05.2019</p></main>
-                        <main>May 26, 2019 <p>8:00 AM</p></main>
-                        <p>LOW</p>
+                    <div className="contact-email-container__style">
+                        <main className="contact-email__style">Adding Images to Featured Posts <p className="updated__style">Updated 1 day ago</p></main>
+                        <main className="contact-email__style">Matt Damon <p className="updated__style">on 24.05.2019</p></main>
+                        <main className="contact-email__style">May 26, 2019 <p className="updated__style">8:00 AM</p></main>
+                        <p className="priority__style">LOW</p>
                     </div>
-                    <div>
-                        <main>When will I be charged this month? <p>Updated 2 days ago</p></main>
-                        <main>Robert Downey <p>on 24.05.2019</p></main>
-                        <main>May 26, 2019 <p>7:30 PM</p></main>
-                        <p>HIGH</p>
+                    <div className="contact-email-container__style">
+                        <main className="contact-email__style">When will I be charged this month? <p className="updated__style">Updated 2 days ago</p></main>
+                        <main className="contact-email__style">Robert Downey <p className="updated__style">on 24.05.2019</p></main>
+                        <main className="contact-email__style">May 26, 2019 <p className="updated__style">7:30 PM</p></main>
+                        <p className="priority__style">HIGH</p>
                     </div>
-                    <div>
-                        <main>Payment not going through <p>Updated 2 days ago</p></main>
-                        <main>Christian Bale <p>on 24.05.2019</p></main>
-                        <main>May 25, 2019 <p>5:00 PM</p></main>
-                        <p>NORMAL</p>
+                    <div className="contact-email-container__style">
+                        <main className="contact-email__style">Payment not going through <p className="updated__style">Updated 2 days ago</p></main>
+                        <main className="contact-email__style">Christian Bale <p className="updated__style">on 24.05.2019</p></main>
+                        <main className="contact-email__style">May 25, 2019 <p className="updated__style">5:00 PM</p></main>
+                        <p className="priority__style">NORMAL</p>
                     </div>
-                    <div>
-                        <main>Unable to add replies <p>Updated 2 days ago</p></main>
-                        <main>Henry Cavil <p>on 24.05.2019</p></main>
-                        <main>May 25, 2019 <p>4:00 PM</p></main>
-                        <p>HIGH</p>
+                    <div className="contact-email-container__style">
+                        <main className="contact-email__style">Unable to add replies <p className="updated__style">Updated 2 days ago</p></main>
+                        <main className="contact-email__style">Henry Cavil <p className="updated__style">on 24.05.2019</p></main>
+                        <main className="contact-email__style">May 25, 2019 <p className="updated__style">4:00 PM</p></main>
+                        <p className="priority__style">HIGH</p>
                     </div>
-                    <div>
-                        <main>Downtime since last week <p>Updated 3 days ago</p></main>
-                        <main>Chris Evans <p>on 23.05.2019</p></main>
-                        <main>May 25, 2019 <p>2:00 PM</p></main>
-                        <p>NORMAL</p>
+                    <div className="contact-email-container__style">
+                        <main className="contact-email__style">Downtime since last week <p className="updated__style">Updated 3 days ago</p></main>
+                        <main className="contact-email__style">Chris Evans <p className="updated__style">on 23.05.2019</p></main>
+                        <main className="contact-email__style">May 25, 2019 <p className="updated__style">2:00 PM</p></main>
+                        <p className="priority__style">NORMAL</p>
                     </div>
-                    <div>
-                        <main>Referral Bonus <p>Updated 4 days ago</p></main>
-                        <main>Sam Smith <p>on 22.05.2019</p></main>
-                        <main>May 25, 2019 <p>11:30 AM</p></main>
-                        <p>LOW</p>
+                    <div className="contact-email-container__style">
+                        <main className="contact-email__style">Referral Bonus <p className="updated__style">Updated 4 days ago</p></main>
+                        <main className="contact-email__style">Sam Smith <p className="updated__style">on 22.05.2019</p></main>
+                        <main className="contact-email__style">May 25, 2019 <p className="updated__style">11:30 AM</p></main>
+                        <p className="priority__style">LOW</p>
                     </div>
-                    <div>
-                        <main> How do I change my password?<p>Updated 6 days ago</p></main>
-                        <main>Steve Rogers <p>on 21.05.2019</p></main>
-                        <main>May 24, 2019 <p>1:00 PM</p></main>
-                        <p>NORMAL</p>
+                    <div className="contact-email-container__style">
+                        <main className="contact-email__style"> How do I change my password?<p className="updated__style">Updated 6 days ago</p></main>
+                        <main className="contact-email__style">Steve Rogers <p className="updated__style">on 21.05.2019</p></main>
+                        <main className="contact-email__style">May 24, 2019 <p className="updated__style">1:00 PM</p></main>
+                        <p className="priority__style">NORMAL</p>
                     </div>
                 </article>
             </div>
